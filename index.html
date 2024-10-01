@@ -3,40 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive with Folders</title>
+    <title>Archive</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Archive with Folders</h1>
+    <h1>Archive</h1>
     <div class="settings">
         <button id="themeToggle" class="footerbutton">Change Theme</button>
         <button class="x"></button>
         <input type="file" id="fileInput" class="footerbutton" webkitdirectory multiple>
+    </div>    
+    <div id="gallery">
+        <div class="media-container">
+            <video src="https://thatsmeee.github.io/archive-beta-3/archive/camvideo_77d63ef1.mp4" title="camvideo_77d63ef1.mp4" controls></video>
+            <div class="caption">camvideo_77d63ef1.mp4</div>
+        </div>
+        <div class="media-container">
+            <img src="https://thatsmeee.github.io/archive-beta-3/archive/Favicon.ico" alt="Favicon.ico" title="Favicon.ico">
+            <div class="caption">Favicon.ico</div>
+        </div>
+        <div class="media-container">
+            <div class="file-icon">📄</div>
+            <div class="caption">MSTeamsSetup_c_l_.exe</div>
+        </div>
+        <div class="media-container">
+            <div class="file-icon">📄</div>
+            <div class="caption">index.html</div>
+        </div>
+        <div class="media-container">
+            <div class="file-icon">📄</div>
+            <div class="caption">scripts.js</div>
+        </div>
+        <div class="media-container">
+            <div class="file-icon">📄</div>
+            <div class="caption">styles.css</div>
+        </div>
+        <div class="media-container">
+            <div class="file-icon">📄</div>
+            <div class="caption">UploadToMega-master.zip</div>
+        </div>
+        <div class="media-container">
+            <div class="file-icon">📄</div>
+            <div class="caption">Цитатна характеристика Катерини.pdf</div>
+        </div>
+        <div class="media-container">
+            <img src="https://thatsmeee.github.io/archive-beta-3/archive/Пори_року.png" alt="Пори_року.png" title="Пори_року.png">
+            <div class="caption">Пори_року.png</div>
+        </div>
+        <div class="media-container">
+            <audio src="https://thatsmeee.github.io/archive-beta-3/archive/groovy-ambient-funk-201745.mp3" title="groovy-ambient-funk-201745.mp3" controls></audio>
+            <div class="caption">groovy-ambient-funk-201745.mp3</div>
+        </div>
     </div>
-
-    <div id="folder-container">
-        <div class="folder" data-folder="images">
-            <h2>Images</h2>
-            <div class="folder-content"></div>
-        </div>
-        <div class="folder" data-folder="videos">
-            <h2>Videos</h2>
-            <div class="folder-content"></div>
-        </div>
-        <div class="folder" data-folder="audio">
-            <h2>Audio</h2>
-            <div class="folder-content"></div>
-        </div>
-        <div class="folder" data-folder="others">
-            <h2>Others</h2>
-            <div class="folder-content"></div>
-        </div>
+    <div id="lightbox" class="hidden">
+        <span id="close">×</span>
+        <div id="lightbox-content"></div>
+        <div id="lightbox-caption"></div>
     </div>
-
     <footer>
         <button id="uploadFiles" class="footerbutton">Upload Files</button>
     </footer>
-
     <script src="scripts.js"></script>
 </body>
 </html>
