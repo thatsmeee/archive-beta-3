@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const correctPassword = '1234';
+    const correctPassword = '1234'; // Set your password here
     const password = prompt('Please enter the password:');
     
     if (password !== correctPassword) {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.alt = item.name;
                 img.title = item.name;
                 img.addEventListener('click', () => openLightbox(img.src, item.name, 'image'));
-                img.onload = () => URL.revokeObjectURL(img.src);
+                img.onload = () => URL.revokeObjectURL(img.src); // Clean up URL
                 container.appendChild(img);
             } else if (item.type.startsWith('video/')) {
                 const video = document.createElement('video');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('fileInput').addEventListener('change', function(event) {
         const files = event.target.files;
         const gallery = document.getElementById('gallery');
-        gallery.innerHTML = '';
+        gallery.innerHTML = '';  // Clear the gallery
 
         Array.from(files).forEach(file => {
             const container = document.createElement('div');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.alt = file.name;
                 img.title = file.name;
                 img.addEventListener('click', () => openLightbox(img.src, file.name, 'image'));
-                img.onload = () => URL.revokeObjectURL(img.src);
+                img.onload = () => URL.revokeObjectURL(img.src);  // Clean up URL
                 container.appendChild(img);
             } else if (file.type.startsWith('video/')) {
                 const video = document.createElement('video');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 const icon = document.createElement('div');
                 icon.className = 'file-icon';
-                icon.innerHTML = '📄';
+                icon.innerHTML = '📄';  // Default icon for unsupported files
                 container.appendChild(icon);
             }
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const lightboxContent = document.getElementById('lightbox-content');
         const lightboxCaption = document.getElementById('lightbox-caption');
 
-        lightboxContent.innerHTML = '';
+        lightboxContent.innerHTML = ''; // Clear lightbox content
 
         if (type === 'image') {
             const img = document.createElement('img');
